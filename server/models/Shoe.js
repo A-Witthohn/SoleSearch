@@ -1,45 +1,27 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
+
 
 const shoeSchema = new Schema({
-  thoughtText: {
+  name: {
     type: String,
-    required: 'You need to leave a thought!',
-    minlength: 1,
-    maxlength: 280,
-    trim: true,
+    required: true,
   },
-  thoughtAuthor: {
-    type: String,
+  price: {
+    type: Number,
     required: true,
     trim: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+  type: {
+    type: String,
+    required: true,
   },
-  comments: [
-    {
-      commentText: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 280,
-      },
-      commentAuthor: {
-        type: String,
-        required: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
-      },
-    },
-  ],
+  votes: {
+    type: Number,
+    required: true,
+  },
+
 });
 
-const Thought = model('Thought', thoughtSchema);
+const Shoe = model('Shoe', shoeSchema);
 
-module.exports = Thought;
+module.exports = Shoe;
