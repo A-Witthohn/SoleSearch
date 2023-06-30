@@ -9,6 +9,13 @@ const typeDefs = gql`
     shoes: [Shoe]
   }
 
+  type Shoe {
+    name: String!
+    price: Float!
+    votes: Int!
+    image: String!
+  }
+
   type Auth {
     token: ID!
     user: User
