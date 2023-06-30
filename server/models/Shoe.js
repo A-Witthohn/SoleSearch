@@ -11,15 +11,14 @@ const shoeSchema = new Schema({
     required: true,
     trim: true,
   },
-  type: {
-    type: String,
-    required: true,
-  },
   votes: {
     type: Number,
     required: true,
   },
-
+  image: {
+    type: String,
+    required: true,
+  }
 });
 
 const Shoe = model('Shoe', shoeSchema);
