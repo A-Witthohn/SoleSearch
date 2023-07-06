@@ -10,8 +10,10 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('shoes');
     },
+    shoes: async () => {
+      return Shoe.find();
   },
-
+  },
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
@@ -35,6 +37,26 @@ const resolvers = {
 
       return { token, user };
     },
+    likeShoe: async (parent, { input }, context) => {
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { shoes: input } },
+          { new: true}
+        ).populate('shoes');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeShoe: async (parent, { shoeId }, context) => {
+        if (context.user) {
+          return User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $pull: { shoes: { _id: shoeId }} },
+            { new: true}
+          ).populate('shoes');
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
   },
 };
 

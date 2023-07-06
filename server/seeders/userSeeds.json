@@ -2,16 +2,22 @@
   {
     "username": "Josh Brown",
     "email": "jbrown@gmail.com",
-    "password": "@brown112"
+    "password": "@brown112",
+    "shoes":[{"shoeName": "Nike Jordans",
+    "price": 75.00,
+    "likes": [],
+    "image": "abc.png"}]
   },
   {
     "username": "David Rayner",
     "email": "drayner@yahoo.com",
-    "password": "@rayner113"
+    "password": "@rayner113",
+    "shoes":[]
   },
   {
     "username": "Alan Smith",
     "email": "asmith@aol.com",
-    "password": "@smith114"
+    "password": "@smith114",
+    "shoes":[]
   }
 ]
