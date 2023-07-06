@@ -1,0 +1,21 @@
+[
+    {
+      "shoeName": "Nike Jordans",
+      "price": 75.00,
+      "likes": [],
+      "image": "abc.png"
+    },
+    {
+        "shoeName": "Adidas",
+        "price": 55.00,
+        "likes": [],
+        "image": "abc.png"
+      },
+      {
+        "shoeName": "Converse",
+        "price": 45.00,
+        "likes": [],
+        "image": "abc.png"
+      }
+  ]
+  

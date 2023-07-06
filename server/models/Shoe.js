@@ -1,19 +1,8 @@
 const { Schema, model } = require('mongoose');
 
-const likeSchema = new Schema(
-  {
-    likeId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
-    username: {
-      type: String,
-      required: true,
-  }
-});
 
 const shoeSchema = new Schema({
-  name: {
+  shoeName: {
     type: String,
     required: true,
   },
@@ -22,7 +11,12 @@ const shoeSchema = new Schema({
     required: true,
     trim: true,
   },
-  likes: [likeSchema],
+  likes: [
+    {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
+  ],
   image: {
     type: String,
     required: true,
@@ -32,9 +26,8 @@ const shoeSchema = new Schema({
     toJSON: {
       virtuals: true,
       getters: true,
-    },
-    id: false,
-  }
+  },
+}
 );
 
 //Virtual property to measure like total

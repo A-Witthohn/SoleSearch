@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const Shoe = require('./Shoe');
+
 const userSchema = new Schema({
   username: {
     type: String,
@@ -19,12 +21,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  shoes: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Shoe',
-    },
-  ],
+  shoes: [Shoe.schema],
 });
 
 userSchema.pre('save', async function (next) {

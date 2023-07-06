@@ -24,3 +24,35 @@ export const ADD_USER = gql`
   }
 `;
 
+export const LIKE_SHOE = gql`
+  mutation likeShoe($input: likedShoes!) {
+    likeShoe(input: $input) {
+      _id
+      username
+      email
+      shoes {
+        _id
+        shoeName
+        price
+        image
+      }
+    }
+  }
+`;
+
+export const REMOVE_SHOE = gql`
+  mutation removeShoe($shoeId: ID!) {
+    removeShoe(shoeId: $shoeId) {
+      _id
+      username
+      email
+      shoes {
+        _id
+        shoeName
+        price
+        image
+      }
+    }
+  }
+`;
+
