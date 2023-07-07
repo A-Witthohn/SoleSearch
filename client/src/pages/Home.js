@@ -6,7 +6,7 @@ const Home = () => {
   
     return (
       <main>
-        <div className="flex-row justify-center">
+        <div className="">
          <h1>Working</h1>
         </div>
       </main>
