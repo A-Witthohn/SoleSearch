@@ -39,11 +39,34 @@ const resolvers = {
     },
     likeShoe: async (parent, { input }, context) => {
       if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { shoes: input } },
-          { new: true}
-        ).populate('shoes');
+        // return User.findOneAndUpdate(
+        //   { _id: context.user._id },
+        //   { $addToSet: { shoes: input } },
+        //   { new: true}
+        // );
+        const user = await User.findById(context.user._id);
+
+        // Create a new like object
+        const like = {
+          userId: user._id,
+          username: user.username,
+        };
+    
+        // Find the shoe by ID and update its likes array
+        const updatedShoe = await Shoe.findOneAndUpdate(
+          { _id: input._id },
+          { $addToSet: { likes: like } },
+          { new: true }
+        ).populate('likes.userId'); // Populate the user information in the likes array
+    
+        // Add the liked shoe to the user's shoes array
+        await User.findOneAndUpdate(
+          { _id: user._id },
+          { $addToSet: { shoes: updatedShoe } },
+          { new: true }
+        );
+    
+        return updatedShoe; // Return the updated shoe object
       }
       throw new AuthenticationError('You need to be logged in!');
     },

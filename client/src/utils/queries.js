@@ -33,11 +33,9 @@ export const QUERY_USER = gql`
         price
         image
         likes{
-          user {
             _id
             username
           }
-      }
     }
   }
 }
@@ -50,12 +48,11 @@ export const QUERY_SHOES = gql`
       shoeName
       price
       image
+      likeCount
       likes{
-        user {
           _id
           username
         }
-    }
   }
 }
 `;
