@@ -1,0 +1,23 @@
+main{
+margin: 0;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    background-color: #141414;
+}
+
+.title{
+text-align: center;
+color: aliceblue;
+font-size: 60px;
+}
+
+.motto{
+    color: aliceblue;
+    text-align: center;
+}
