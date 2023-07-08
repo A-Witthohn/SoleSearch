@@ -1,24 +1,103 @@
 [
-    {
-      "shoeName": "Nike Jordans",
-      "price": 75.00,
-      "likes": [{
-        "userId": "64a767404233488fd76ce677",
-        "username": "Josh Brown"
-      }],
-      "image": "abc.png"
+  {
+    "shoeName": "Ace Sneaker with Bee, Gucci Womens shoe",
+    "price": 780.00,
+    "likes": [{
+      "userId": "64a767404233488fd76ce677",
+      "username": "Josh Brown"
+    }],
+    "image": "AceSneakerWithBeeGucciWomens.png"
+  },
+  {
+      "shoeName": "Adidas + Kanye West Boost 350 V2 YeezReel ",
+      "price": 220.00,
+      "likes": [],
+      "image": "Adidas+KanyeWestBoost350V2YeezReel.png"
     },
     {
-        "shoeName": "Adidas",
-        "price": 55.00,
-        "likes": [],
-        "image": "abc.png"
-      },
-      {
-        "shoeName": "Converse",
-        "price": 45.00,
-        "likes": [],
-        "image": "abc.png"
-      }
-  ]
+      "shoeName": "Adidas YeezyBoost 350 v2 BelugaRF Steeple Grey",
+      "price": 500.00,
+      "likes": [],
+      "image": "AdidasYeezyBoost350v2BelugaRFSteepleGrey.jpg"
+    }
+    ,
+    {
+      "shoeName": "Adidas YeezyBoost 350 v2 BelugaRF Steeple Grey",
+      "price": 500.00,
+      "likes": [],
+      "image": "AdidasYeezyBoost350v2BelugaRFSteepleGrey.png"
+    },
+    {
+      "shoeName": "Air Jordan 1 Mid Cement Grey True Blue",
+      "price": 125.00,
+      "likes": [],
+      "image": "AirJordan1MidCementGreyTrueBlue.png"
+    },
+    {
+      "shoeName": "Air Jordan XXXVII Low Citron Pulse Laser Orange",
+      "price": 500.00,
+      "likes": [],
+      "image": "AirJordanXXXVIILowCitronPulseLaserOrange.png"
+    },
+    {
+      "shoeName": "Balenciaga X Crocs Logo Debossed Pumps",
+      "price": 673.00,
+      "likes": [],
+      "image": "BalenciagaXCrocsLogoDebossedPumps.png"
+    },
+    {
+      "shoeName": "Balenciaga Mens Runner Sneaker in White",
+      "price": 500.00,
+      "likes": [],
+      "image": "BalenciagaMensRunnerSneakerWhite.png"
+    },
+    {
+      "shoeName": "Nike Air Jordan 1 High Dior",
+      "price": 7257.00,
+      "likes": [],
+      "image": "NikeAirJordan1HighDior.png"
+    },
+    {
+      "shoeName": "Nike Pegasus FlyEase Womens",
+      "price": 150.00,
+      "likes": [],
+      "image": "NikePegasusFlyEaseWomens.png"
+    },
+    {
+      "shoeName": "Nike Quest 4 Royal Blue Womens",
+      "price": 136.00,
+      "likes": [],
+      "image": "NikeQuest4Womens.png"
+    },
+    {
+      "shoeName": "Nike Vaporfly 3 Pink/Laser Orange Womens",
+      "price": 250.00,
+      "likes": [],
+      "image": "NikeVaporfly3Womens.png"
+    },
+    {
+      "shoeName": "Run Away Sneaker Louis Vuitton",
+      "price": 1220.00,
+      "likes": [],
+      "image": "RunAwaySneakerLouisVuitton.png"
+    },
+    {
+      "shoeName": "Street Fighter Shaq Attaq Basketball Shoes",
+      "price": 120.00,
+      "likes": [],
+      "image": "StreetFighterShaqAttaqBasketballShoes.png"
+    },
+    {
+      "shoeName": "Yeezt Boost 700",
+      "price": 376.00,
+      "likes": [],
+      "image": "YeeztBoost700.png"
+    },
+    {
+      "shoeName": "Yeezy 450  Resin",
+      "price": 248.00,
+      "likes": [],
+      "image": "Yeezy450Resin.png"
+    }
+]
   
