@@ -1,5 +1,18 @@
 const { Schema, model } = require('mongoose');
 
+const User = require('./User');
+
+const likeSchema = new Schema({
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+});
 
 const shoeSchema = new Schema({
   shoeName: {
@@ -11,16 +24,11 @@ const shoeSchema = new Schema({
     required: true,
     trim: true,
   },
-  likes: [
-    {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-      },
-  ],
   image: {
     type: String,
     required: true,
   },
+  likes: [likeSchema],
 },
   {
     toJSON: {

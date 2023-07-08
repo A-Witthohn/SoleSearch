@@ -2,7 +2,10 @@
     {
       "shoeName": "Nike Jordans",
       "price": 75.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767404233488fd76ce677",
+        "username": "Josh Brown"
+      }],
       "image": "abc.png"
     },
     {

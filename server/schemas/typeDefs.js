@@ -9,12 +9,19 @@ const typeDefs = gql`
     shoes: [Shoe]
   }
 
+  type likeSchemaInput {
+    _id: ID!
+    userId: ID!
+    username: String
+  }
+
   type Shoe {
     _id: ID!
     shoeName: String!
     price: Float!
-    likes: [User]
+    likes: [likeSchemaInput]
     image: String!
+    likeCount: Int
   }
 
   input likedShoes {
