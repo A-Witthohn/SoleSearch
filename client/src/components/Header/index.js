@@ -13,7 +13,7 @@ const Header = () => {
       <div className="">
         <div>
           <Link className="companyName" to="/">
-            <h1 className="title">SoleSearch</h1>
+            <img className="title"src='FullLogo_Transparent_NoBuffer.png'/>
           </Link>
           <p className="motto">Find your next shoe!</p>
           <Navbar/>

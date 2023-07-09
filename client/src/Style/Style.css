@@ -4,20 +4,82 @@ margin: 0;
 
 body{
     margin: 0;
+    background-color: #eee;
+
 }
 
 header{
     width: 100%;
-    background-color: #141414;
+    background-color: #eee;
+    height: 2%;
 }
 
 .title{
+    justify-content: center;
 text-align: center;
-color: aliceblue;
+color: rgb(0, 0, 0);
 font-size: 60px;
+width: 100%;
 }
 
 .motto{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     text-align: center;
+    font-size: 30px;
 }
+
+
+/* Social Footer Style */
+
+.h4{
+    justify-content: center;
+
+}
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    padding: 25px 50px;
+  }
+  
+  .follow-text {
+    text-align: center;
+    color: #141414;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+  }
+  
+  .social {
+    margin: 0 2rem;
+    transform: translateY(0);
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .social:hover {
+    transform: translateY(-4px);
+  }
+  
+  .youtube {
+    color: #eb3223;
+  }
+  
+  .facebook {
+    color: #4968ad;
+  }
+  
+  .twitter {
+    color: #49a1eb;
+  }
+  
+  .instagram {
+    color: black;
+  }

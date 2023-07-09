@@ -1,9 +1,9 @@
 function Navbar() {
     return (
         <div>
-            <a href="/">Home </a>
-            <a href="/SoleSurvivor">SoleSurvivor</a>
-            <a href="/MyProfile">MyProfile</a>
+            <a href="/" className="navbar">Home </a>
+            <a href="/SoleSurvivor" className="navbar">SoleSurvivors</a>
+            <a href="/MyProfile" className="navbar">MyProfile</a>
         </div>
     )
 
