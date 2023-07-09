@@ -58,7 +58,7 @@ const { shoes } = data;
          {shoes.map((shoe) => (
             <div key={shoe._id}>
               <h2>{shoe.shoeName}</h2>
-              <img src={require(`../Assets-SoleSearch/${shoe.image}`).default} alt={shoe.shoeName} />
+              <img src={(`../images/${shoe.image}`).default} alt={shoe.shoeName} />
               <button onClick={() => handleLikeShoe(shoe._id)}>Like</button>
               <button onClick={() => handleRemoveShoe(shoe._id)}>Remove</button>
               <p>Likes: {shoe.likeCount}</p>
