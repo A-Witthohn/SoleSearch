@@ -1,73 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import  { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { QUERY_SHOES } from '../utils/queries';
 import { LIKE_SHOE } from '../utils/mutations';
-import { REMOVE_SHOE } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
 
 const Home = () => {
-const { loading, data } = useQuery(QUERY_SHOES);
-const [likeShoe] = useMutation(LIKE_SHOE);
-const [removeShoe] = useMutation(REMOVE_SHOE);
+  const { loading, data } = useQuery(QUERY_SHOES);
+  const [likeShoe] = useMutation(LIKE_SHOE);
 
-const handleLikeShoe = async (shoeId) => {
-  const token = Auth.loggedIn() ? Auth.getToken() : null;
+  // Keeps track of the index of the shoe we want to display on the page
+  const [currentShoeIndex, setCurrentShoeIndex] = useState(0);
 
-  if (!token) {
-    return false;
-  }
 
-  try {
-    await likeShoe({
-      variables: { shoeId: shoeId },
-    });
-  } catch (err) {
-    console.error(err);
-  }
-};
+  // Handle Like Shoe
+  const handleLikeShoe = async (shoeId) => {
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-const handleRemoveShoe = async (shoeId) => {
-  const token = Auth.loggedIn() ? Auth.getToken() : null;
-  
-  if (!token) {
-    return false;
-  }
+    if (!token) {
+      return false;
+    }
 
-  try {
-    await removeShoe({
-      variables: { shoeId: shoeId },
-    });
-  } catch (err) {
-    console.error(err);
-  }
-};
+    try {
+      await likeShoe({
+        variables: { shoeId: shoeId },
+        refetchQueries: [{ query: QUERY_SHOES }],
+      });
 
-if (loading) {
-  return <div>Loading...</div>;
-}
-
-const { shoes } = data;
-
-    return (
-      <main>
-        <div>
-         <h1>Rate Your Shoes and Share Your Sole Experience!</h1>
-         {shoes.map((shoe) => (
-            <div key={shoe._id}>
-              <h2>{shoe.shoeName}</h2>
-              <img src={(`../images/${shoe.image}`).default} alt={shoe.shoeName} />
-              <button onClick={() => handleLikeShoe(shoe._id)}>Like</button>
-              <button onClick={() => handleRemoveShoe(shoe._id)}>Remove</button>
-              <p>Likes: {shoe.likeCount}</p>
-        </div>
-      ))}
-        </div>
-      </main>
-    );
+      setCurrentShoeIndex((prevIndex) => prevIndex + 1);
+    } catch (err) {
+      console.error(err);
+    }
   };
+
+
+  // Handle Skip Shoe
+  const handleSkipShoe = () => {
+    setCurrentShoeIndex((prevIndex) => prevIndex + 1);
+  };
+
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+
+  const { shoes } = data;
+
+  // If there are no more shoes to rate, render this message
+  if (currentShoeIndex >= shoes.length) {
+    return <h2>No more shoes to rate!</h2>;
+  }
+
+  const currentShoe = shoes[currentShoeIndex];
+
+
+  return (
+    <main>
+      <div>
+        <h1>Rate Your Shoes and Share Your Sole Experience!</h1>
+        <div key={currentShoe._id}>
+          <h2>{currentShoe.shoeName}</h2>
+          <img src={(`../images/${currentShoe.image}`)} alt={currentShoe.shoeName} />
+          <p>Price: ${currentShoe.price}</p>
+          <button onClick={() => handleLikeShoe(currentShoe._id)}>Like</button>
+          <button onClick={handleSkipShoe}>Skip</button>
+        </div>
+      </div>
+    </main>
+  );
+};
 
 export default Home;
 
