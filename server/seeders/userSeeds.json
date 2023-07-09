@@ -3,10 +3,7 @@
     "username": "Josh Brown",
     "email": "jbrown@gmail.com",
     "password": "@brown112",
-    "shoes":[{"shoeName": "Nike Jordans",
-    "price": 75.00,
-    "likes": [],
-    "image": "abc.png"}]
+    "shoes":[]
   },
   {
     "username": "David Rayner",
