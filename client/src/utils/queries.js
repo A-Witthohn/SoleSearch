@@ -11,11 +11,6 @@ export const QUERY_USERS = gql`
         shoeName
         price
         image
-        likes {
-            _id
-            username
-          }
-        }
       }
     }
   }
@@ -32,10 +27,6 @@ export const QUERY_USER = gql`
         shoeName
         price
         image
-        likes{
-            _id
-            username
-          }
     }
   }
 }
