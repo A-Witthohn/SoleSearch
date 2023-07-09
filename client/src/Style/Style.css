@@ -14,6 +14,30 @@ header{
     height: 2%;
 }
 
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.navbar-link {
+  margin: 0 10px;
+  border: solid black;
+  border-width: 2px 2px 2px 2px;
+  font-size: 24px;
+  padding: 10px;
+  color: #FF4E8E;
+  background-color: #2EFFB6;
+}
+.break{
+  height: 5px;
+  background-color: black;
+  margin-top: 0px;
+}
+
 .title{
     justify-content: center;
 text-align: center;
@@ -65,7 +89,7 @@ width: 100%;
   }
   
   .social:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
   }
   
   .youtube {

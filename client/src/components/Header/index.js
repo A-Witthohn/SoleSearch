@@ -16,8 +16,8 @@ const Header = () => {
             <img className="title"src='FullLogo_Transparent_NoBuffer.png'/>
           </Link>
           <p className="motto">Find your next shoe!</p>
-          <Navbar/>
         </div>
+        <Navbar/>
         <div>
           {Auth.loggedIn() ? (
             <>
