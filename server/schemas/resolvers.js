@@ -39,11 +39,6 @@ const resolvers = {
     },
     likeShoe: async (parent, { input }, context) => {
       if (context.user) {
-        // return User.findOneAndUpdate(
-        //   { _id: context.user._id },
-        //   { $addToSet: { shoes: input } },
-        //   { new: true}
-        // );
         const user = await User.findById(context.user._id);
 
         // Create a new like object
@@ -71,14 +66,27 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     removeShoe: async (parent, { shoeId }, context) => {
-        if (context.user) {
-          return User.findOneAndUpdate(
-            { _id: context.user._id },
-            { $pull: { shoes: { _id: shoeId }} },
-            { new: true}
-          ).populate('shoes');
-        }
-        throw new AuthenticationError('You need to be logged in!');
+      if (context.user) {
+        
+      const userId = context.user._id;
+
+      // Remove the shoe from the user's shoes array
+      const updatedUser = await User.findOneAndUpdate(
+        { _id: userId },
+        { $pull: { shoes: { _id: shoeId }} },
+        { new: true }
+      ).populate('shoes');
+
+      // Remove the like with matching userId from the shoe's likes array
+      await Shoe.findOneAndUpdate(
+        { _id: shoeId },
+        { $pull: { likes: { userId } } },
+        { new: true }
+      ).populate('likes.userId');
+
+      return updatedUser;
+          }
+      throw new AuthenticationError('You need to be logged in!');
       },
   },
 };
