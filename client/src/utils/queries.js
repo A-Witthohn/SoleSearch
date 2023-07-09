@@ -28,7 +28,7 @@ export const QUERY_USER = gql`
         shoeName
         price
         image
-
+      }
     }
   }
 `;
