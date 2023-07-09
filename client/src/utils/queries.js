@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_USERS = gql`
-  query users {
+  query getUsers {
     users {
       _id
       username
@@ -12,9 +12,8 @@ export const QUERY_USERS = gql`
         price
         image
         likes {
-            _id
-            username
-          }
+          _id
+          username
         }
       }
     }
@@ -22,7 +21,7 @@ export const QUERY_USERS = gql`
 `;
 
 export const QUERY_USER = gql`
-  query user($username: String!) {
+  query getUser($username: String!) {
     user(username: $username) {
       _id
       username
@@ -32,13 +31,13 @@ export const QUERY_USER = gql`
         shoeName
         price
         image
-        likes{
-            _id
-            username
-          }
+        likes {
+          _id
+          username
+        }
+      }
     }
   }
-}
 `;
 
 export const QUERY_SHOES = gql`
@@ -49,10 +48,10 @@ export const QUERY_SHOES = gql`
       price
       image
       likeCount
-      likes{
-          _id
-          username
-        }
+      likes {
+        _id
+        username
+      }
+    }
   }
-}
 `;
