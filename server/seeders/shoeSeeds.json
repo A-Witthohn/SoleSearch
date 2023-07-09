@@ -4,8 +4,21 @@
     "price": 780.00,
     "likes": [{
       "userId": "64a767404233488fd76ce677",
-      "username": "Josh Brown"
-    }],
+      "username": "Josh Benson"
+    },
+    {
+      "userId": "64a767404233488fd444444e",
+      "username": "James Smith"
+    },
+    {
+      "userId": "64a767404233488fd444624e",
+      "username": "John Adams"
+    }, 
+    {
+      "userId": "64a766404233488fd76ce677",
+      "username": "Sara Thomas"
+    }
+  ],
     "image": "AceSneakerWithBeeGucciWomens.png"
   },
   {
@@ -17,7 +30,22 @@
     {
       "shoeName": "Adidas YeezyBoost 350 v2 BelugaRF Steeple Grey",
       "price": 500.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767404231118fd76ce677",
+        "username": "Josh Benson"
+      },
+      {
+        "userId": "64a76740423348342444444e",
+        "username": "James Smith"
+      },
+      {
+        "userId": "64a457404233488fd444624e",
+        "username": "John Adams"
+      }, 
+      {
+        "userId": "64a457404233489fd444624e",
+        "username": "Sara Thomas"
+      }],
       "image": "AdidasYeezyBoost350v2BelugaRFSteepleGrey.jpg"
     },
     {
@@ -35,7 +63,30 @@
     {
       "shoeName": "Balenciaga X Crocs Logo Debossed Pumps",
       "price": 673.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767450231118fd76ce677",
+        "username": "Josh Benson"
+      },
+      {
+        "userId": "64a76740113348342444444e",
+        "username": "James Smith"
+      },
+      {
+        "userId": "64a457404233098fd444624e",
+        "username": "John Adams"
+      }, 
+      {
+        "userId": "64a7674042357815d444624e",
+        "username": "Sara Thomas"
+      },
+      {
+        "userId": "64a709404235785fd444624e",
+        "username": "Steve Thomas"
+      },
+      {
+        "userId": "64a767984235781fd444624e",
+        "username": "Jim Bob"
+      }],
       "image": "BalenciagaXCrocsLogoDebossedPumps.png"
     },
     {
@@ -47,7 +98,34 @@
     {
       "shoeName": "Nike Air Jordan 1 High Dior",
       "price": 7257.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767459131118fd76ce677",
+        "username": "Josh Benson"
+      },
+      {
+        "userId": "64a76740113311142444444e",
+        "username": "James Smith"
+      },
+      {
+        "userId": "64a76740113311142455444e",
+        "username": "John Adams"
+      }, 
+      {
+        "userId": "64a767404235705fd444624e",
+        "username": "Sara Thomas"
+      },
+      {
+        "userId": "64a7094042357802d444624e",
+        "username": "Steve Thomas"
+      },
+      {
+        "userId": "64a7679842357815f404624e",
+        "username": "Jim Bob"
+      },
+      {
+        "userId": "64a7679522357815f404624e",
+        "username": "Michael Jordan"
+      }],
       "image": "NikeAirJordan1HighDior.png"
     },
     {
@@ -77,7 +155,18 @@
     {
       "shoeName": "Street Fighter Shaq Attaq Basketball Shoes",
       "price": 120.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767019131118fd76ce677",
+        "username": "Josh Benson"
+      },
+      {
+        "userId": "64a76754113311142444444e",
+        "username": "James Smith"
+      },
+      {
+        "userId": "64a767019131118fd66ce677",
+        "username": "John Adams"
+      }],
       "image": "StreetFighterShaqAttaqBasketballShoes.png"
     },
     {
@@ -89,7 +178,30 @@
     {
       "shoeName": "Yeezy 450  Resin",
       "price": 248.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767450231118fd76ce678",
+        "username": "Josh Benson"
+      },
+      {
+        "userId": "64a76740113348342444445e",
+        "username": "James Smith"
+      },
+      {
+        "userId": "64a457404233098fd444626e",
+        "username": "John Adams"
+      }, 
+      {
+        "userId": "64a060450231128fd76ce678",
+        "username": "Sara Thomas"
+      },
+      {
+        "userId": "64a760450231128fd76ce678",
+        "username": "Steve Thomas"
+      },
+      {
+        "userId": "64a767450231128fd76ce678",
+        "username": "Jim Bob"
+      }],
       "image": "Yeezy450Resin.png"
     }
 ]
