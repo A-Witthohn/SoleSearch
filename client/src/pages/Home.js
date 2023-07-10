@@ -61,15 +61,22 @@ const Home = () => {
     <main>
       <div>
         <h1>Rate Your Shoes and Share Your Sole Experience!</h1>
-        <div key={currentShoe._id}>
-          <h2>{currentShoe.shoeName}</h2>
-          <img src={(`../images/${currentShoe.image}`)} alt={currentShoe.shoeName} />
-          <p>Price: ${currentShoe.price}</p>
-          <button onClick={() => handleLikeShoe(currentShoe._id)}>Like</button>
-          <button onClick={handleSkipShoe}>Skip</button>
+        <div className="card">
+          <div key={currentShoe._id}>
+            <img className='ImageSize' src={(`../images/${currentShoe.image}`)} alt={currentShoe.shoeName} />
+            <div className="text-wrapper">
+              <h2>{currentShoe.shoeName}</h2>
+              <p>Price: ${currentShoe.price}</p>
+            </div>
+            <div className="button-wrapper">
+              <button onClick={() => handleLikeShoe(currentShoe._id)}>Like</button>
+              <div className="button-spacing"></div>
+              <button onClick={handleSkipShoe}>Skip</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+    </div>
+    </main >
   );
 };
 
