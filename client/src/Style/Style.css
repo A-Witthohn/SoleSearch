@@ -1,63 +1,108 @@
 main {
   padding-top: 8px;
-  place-items: center; /* Center the items vertically and horizontally */
+  place-items: center;
+  /* Center the items vertically and horizontally */
 }
 
-body{
-    margin: 0;
-    background-color: #eee;
+body {
+  margin: 0;
+  background-color: #cac9c9;
 
 }
 
-header{
-    width: 100%;
-    background-color: #eee;
-    height: 2%;
-    padding-top: 10px;
-    margin-top: 10px;
-    padding-bottom: 10px;
+/* Header */
+
+header {
+  width: 100%;
+  background-color: #cac9c9;
+  height: 2%;
+  padding-top: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
-  .SignIn {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .SignIn a {
-    margin-left: 10px;
-  }
 
-.login{
-    border: solid black;
+/* Sign In / Sign Up / Sign Out */
+.SignIn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.SignIn a {
+  margin-left: 10px;
+}
+
+.login {
+  border: solid black;
   border-width: 2px 2px 2px 2px;
   border-radius: 8px;
   font-size: 18px;
   padding: 10px;
   maright-right: 5px;
   color: #FF4E8E;
-  background-color: #eee;
+  background-color: #cac9c9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login:hover {
+  background-color: #2EFFB6;
   text-underline-offset: 5px;
+  text-decoration: underline;
 }
 
-.login:hover{
-background-color: #2EFFB6;
-
-}
-
-.signup{
+.signup {
   border: solid black;
   border-width: 2px 2px 2px 2px;
   border-radius: 8px;
   font-size: 18px;
   padding: 10px;
   color: #FF4E8E;
-  background-color: #eee;
+  background-color: #cac9c9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup:hover {
+  background-color: #2EFFB6;
+  text-underline-offset: 5px;
+  text-decoration: underline;
+
+}
+
+
+a.Username {
+  margin: 3px;
+
+}
+
+
+.Username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.Username:visited {
+  font-size: 18px;
+  color: #005139;
+}
+
+
+.logout {
+  border: solid black;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px;
+  color: #FF4E8E;
+  background-color: #cac9c9;
   text-underline-offset: 5px;
 }
 
-.signup:hover{
+.logout:hover {
   background-color: #2EFFB6;
 }
 
@@ -68,12 +113,14 @@ background-color: #2EFFB6;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  margin-bottom: 8px;
+  width: 50%;
   padding: 0px;
-  background-color: #eee;
+  background-color: #cac9c9;
 }
 
 @media (max-width: 768px) {
+
   /* Styles for screens smaller than 768px */
   .Navbar {
     flex-direction: column;
@@ -95,14 +142,19 @@ background-color: #2EFFB6;
   font-size: 24px;
   padding: 10px;
   color: #FF4E8E;
-  background-color: #eee;
-  text-underline-offset: 5px;
+  background-color: #cac9c9;
+  text-decoration: none;
 }
 
-.navbar-link:hover{
+.navbar-link:hover {
   background-color: #2EFFB6;
+  text-underline-offset: 5px;
+  text-decoration: underline;
+
+
 }
-.break{
+
+.break {
   height: 5px;
   background-color: black;
   margin-top: 0px;
@@ -122,9 +174,9 @@ background-color: #2EFFB6;
 
 /* body of page */
 
-h1{
-margin-bottom: 0px;
-text-align: center;
+h1 {
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 
@@ -134,11 +186,12 @@ text-align: center;
   align-items: center;
   text-align: center;
   padding: 20px;
-  margin-top: 20px; /* Add margin-top to create space below the header */
+  margin-top: 20px;
+  /* Add margin-top to create space below the header */
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 8px;
-  background-color: #eee;
+  background-color: #cac9c9;
 }
 
 
@@ -164,56 +217,115 @@ text-align: center;
   margin-top: 10px;
 }
 
+.button-wrapper {
+  display: flex;
+  /* Add this to enable flexbox */
+  justify-content: center;
+  /* Center the buttons horizontally */
+  margin-top: 10px;
+}
+
+.button-wrapper button {
+  margin: 0 5px;
+  /* Add margin to create space between the buttons */
+}
+
+.Price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.like-count{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Love {
+  margin: 0 10px;
+  border: solid black;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 10px;
+  color: #3ecaa8;
+  background-color: #cac9c9;
+  text-underline-offset: 5px;
+}
+
+.Love:hover {
+  color: white;
+  background-color: #2EFFB6;
+}
+
+.Hate {
+  margin: 0 10px;
+  border: solid black;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 10px;
+  color: #FF4E8E;
+  background-color: #cac9c9;
+  text-underline-offset: 5px;
+}
+
+.Hate:hover {
+  color: white;
+  background-color: #FF4E8E;
+}
+
 /* Social Footer Style */
 
-.h4{
-    justify-content: center;
+.h4 {
+  justify-content: center;
 
 }
+
 .social-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #eee;
-  }
-  
-  .follow-text {
-    text-align: center;
-    color: #141414;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 10px;
-  }
-  
-  .social {
-    margin: 0 2rem;
-    transform: translateY(0);
-    text-align: center;
-    display: inline-block;
-  }
-  
-  .social:hover {
-    transform: translateY(-5px);
-  }
-  
-  .youtube {
-    color: #eb3223;
-  }
-  
-  .facebook {
-    color: #4968ad;
-  }
-  
-  .twitter {
-    color: #49a1eb;
-  }
-  
-  .instagram {
-    color: black;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #cac9c9;
+}
+
+.follow-text {
+  text-align: center;
+  color: #141414;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.social {
+  margin: 0 2rem;
+  transition: transform 250ms;
+  transform: translateY(0);
+  text-align: center;
+  display: inline-block;
+}
+
+.social:hover {
+  transform: translateY(-5px);
+}
+
+.youtube {
+  color: #eb3223;
+}
+
+.facebook {
+  color: #4968ad;
+}
+
+.twitter {
+  color: #49a1eb;
+}
+
+.instagram {
+  color: black;
+}

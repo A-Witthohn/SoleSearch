@@ -10,7 +10,7 @@ from "@fortawesome/free-brands-svg-icons"
 export default function SocialFollow() {
     return (
       <div className="social-container">
-        <p className="follow-text">Follow us for more shoes @SoleSearch ❤️</p>
+        <p className="follow-text">Follow us for latest shoes @SoleSearch ❤️</p>
   
         <div className="social-icons">
           <a href="https://www.Facebook.com" className="facebook social">
