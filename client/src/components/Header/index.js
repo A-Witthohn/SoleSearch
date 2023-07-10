@@ -9,16 +9,9 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="">
+    <header className="Header">
       <div className="">
-        <div>
-          <Link className="companyName" to="/">
-            <img className="title"src='FullLogo_Transparent_NoBuffer.png'/>
-          </Link>
-          <p className="motto">Find your next shoe!</p>
-        </div>
-        <Navbar/>
-        <div>
+        <div className='SignIn'>
           {Auth.loggedIn() ? (
             <>
               <span>Hey there, {Auth.getProfile().data.username}!</span>
@@ -28,15 +21,22 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="" to="/login">
+              <Link className="login" to="/login">
                 Login
               </Link>
-              <Link className="" to="/signup">
+              <Link className="signup" to="/signup">
                 Signup
               </Link>
             </>
           )}
         </div>
+        <div>
+          <div className="companyName" to="/">
+            <img className="title" src='FullLogo_Transparent_NoBuffer.png' />
+          </div>
+        </div>
+        <Navbar />
+        <hr className='break'></hr>
       </div>
     </header>
   );

@@ -4,7 +4,7 @@ import { QUERY_SHOES } from '../utils/queries';
 
 
 const SoleSurvivor = () => {
-    const { loading, data } = useQuery(QUERY_SHOES);
+  const { loading, data } = useQuery(QUERY_SHOES);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -20,16 +20,16 @@ const SoleSurvivor = () => {
 
   return (
     <main>
-      <div>
-        <h1>Sole Survivor page</h1>
-        {top5Shoes.map((shoe) => (
-          <div key={shoe._id}>
-            <h2>{shoe.shoeName}</h2>
+      <h1>Unforgettable Soles: Celebrating Sole Search's Timeless Icons!</h1>
+      {top5Shoes.map((shoe, index) => (
+        <div className="card-item" key={shoe._id}>
+          <div className="card">
+          <h2>{`${index + 1}. ${shoe.shoeName}`}</h2>
+          <p>All-Time Likes: {shoe.likeCount}</p>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
-            <p>Likes: {shoe.likeCount}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </main>
   );
 };
