@@ -1,38 +1,62 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import { QUERY_SHOES } from '../utils/queries';
-
+import { useMutation, useQuery } from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
+import { REMOVE_SHOE } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const MyProfile = () => {
-    const { loading, data } = useQuery(QUERY_SHOES);
 
+  const { username } = Auth.getProfile().data;
+
+  const { loading, data } = useQuery(QUERY_USER, {
+      variables: { username }, 
+    });
+
+  const userData = data?.user || [];
+  const [removeShoe] = useMutation(REMOVE_SHOE);
+ 
+  const handleDeleteShoe = async (shoeId) => {
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+    console.log("delete")
+    if (!token) {
+      return false;
+    }
+
+    try {
+      await removeShoe({
+        variables: { shoeId: shoeId },
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  // if data isn't here yet, say so
   if (loading) {
-    return <div>Loading...</div>;
+    return <h2>LOADING...</h2>;
   }
-
-  const { shoes } = data;
-
-  // Sort the shoes array based on the likeCount in descending order
-  const sortedShoes = [...shoes].sort((a, b) => b.likeCount - a.likeCount);
-
-  // Get the top 5 shoes with the most likes
-  const top5Shoes = sortedShoes.slice(0, 5);
 
   return (
     <main>
       <div>
-        <h1>Sole Survivor page</h1>
-        {top5Shoes.map((shoe) => (
+          <h1>Viewing saved shoes!</h1>
+      </div>
+        <h2>
+          {userData.shoes.length
+            ? `Viewing ${userData.shoes.length} saved ${userData.shoes.length === 1 ? 'shoe' : 'shoes'}:`
+            : 'You have no saved shoes!'}
+        </h2>
+       
+        {userData.shoes.map((shoe) => (
           <div key={shoe._id}>
             <h2>{shoe.shoeName}</h2>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
-            <p>Likes: {shoe.likeCount}</p>
+            <button onClick={() => handleDeleteShoe(shoe._id)}>Remove Shoe</button>
+            
           </div>
         ))}
-      </div>
     </main>
   );
 };
-
 
 export default MyProfile;
