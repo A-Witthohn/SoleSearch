@@ -60,18 +60,18 @@ const Home = () => {
   return (
     <main>
       <div>
-        <h1>Rate Your Shoes and Share Your Sole Experience!</h1>
+        <h1>Discover Your Sole Mate: Explore Sole Search's Diverse Shoe Collection!</h1>
         <div className="card">
           <div key={currentShoe._id}>
             <img className='ImageSize' src={(`../images/${currentShoe.image}`)} alt={currentShoe.shoeName} />
             <div className="text-wrapper">
               <h2>{currentShoe.shoeName}</h2>
-              <p>Price: ${currentShoe.price}</p>
+              <p className='Price'>Price: ${currentShoe.price}</p>
             </div>
             <div className="button-wrapper">
-              <button onClick={() => handleLikeShoe(currentShoe._id)}>Like</button>
+            <button className='Hate' onClick={handleSkipShoe}>👎</button>
+              <button className='Love' onClick={() => handleLikeShoe(currentShoe._id)}>👍</button>
               <div className="button-spacing"></div>
-              <button onClick={handleSkipShoe}>Skip</button>
             </div>
           </div>
         </div>

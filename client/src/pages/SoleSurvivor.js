@@ -25,7 +25,7 @@ const SoleSurvivor = () => {
         <div className="card-item" key={shoe._id}>
           <div className="card">
           <h2>{`${index + 1}. ${shoe.shoeName}`}</h2>
-          <p>All-Time Likes: {shoe.likeCount}</p>
+          <p className='like-count'>All-Time Likes: {shoe.likeCount}</p>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
           </div>
         </div>

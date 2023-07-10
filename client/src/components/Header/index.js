@@ -14,8 +14,8 @@ const Header = () => {
         <div className='SignIn'>
           {Auth.loggedIn() ? (
             <>
-              <span>Hey there, {Auth.getProfile().data.username}!</span>
-              <button className="" onClick={logout}>
+              <span className='Username'>Welcome back,<Link className='Username' to="/MyProfile">{Auth.getProfile().data.username}</Link></span>
+              <button className="logout" onClick={logout}>
                 Logout
               </button>
             </>
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <div>
           <div className="companyName" to="/">
-            <img className="title" src='FullLogo_Transparent_NoBuffer.png' />
+            <img className="title" src='FullLogo_Transparent_NoBuffer.png' alt='Sole Search Title' />
           </div>
         </div>
         <Navbar />
