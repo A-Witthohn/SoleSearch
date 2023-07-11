@@ -17,7 +17,7 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, 'utils', 'favicon.ico')))
 
 
 if (process.env.NODE_ENV === 'production') {
