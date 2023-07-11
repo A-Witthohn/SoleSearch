@@ -10,10 +10,35 @@ const MyProfile = () => {
 
   const { loading, data } = useQuery(QUERY_USER, {
       variables: { username }, 
+      fetchPolicy: 'network-only',
     });
 
   const userData = data?.user || [];
   const [removeShoe] = useMutation(REMOVE_SHOE);
+
+  const getLikedShoes = () => {
+    const token = Auth.getToken();
+  
+    // Check if the user is logged in
+    if (!Auth.loggedIn() || !token) {
+      return []; 
+    }
+  
+    try {
+      // Retrieve the liked shoes from localStorage 
+      const likedShoesStr = localStorage.getItem('likedShoes');
+  
+      if (likedShoesStr) {
+        const likedShoes = JSON.parse(likedShoesStr);
+        return likedShoes;
+      } else {
+        return []; 
+      }
+    } catch (err) {
+      console.error('Error retrieving liked shoes:', err);
+      return []; 
+    }
+  };
  
   const handleDeleteShoe = async (shoeId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -26,6 +51,11 @@ const MyProfile = () => {
       await removeShoe({
         variables: { shoeId: shoeId },
       });
+
+      const likedShoes = getLikedShoes();
+      const updatedLikedShoes = likedShoes.filter((id) => id !== shoeId);
+      localStorage.setItem('likedShoes', JSON.stringify(updatedLikedShoes));
+
     } catch (err) {
       console.error(err);
     }
