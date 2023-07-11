@@ -27,10 +27,10 @@ const SoleSurvivor = () => {
         <div className="card-item" key={shoe._id}>
           <div className="card">
           <h2>{`${index + 1}. ${shoe.shoeName}`}</h2>
-          <p className='like-count'>All-Time Likes: {shoe.likeCount}</p>
+          <p className='like-count'>All-Time Likes: <span className='SoleSurvivorLike'> {shoe.likeCount}</span></p>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
             <a href={shoe.shoeLink} target="_blank" rel="noopener noreferrer">
-                <button>Buy Shoe</button>
+                <button className='BuyShoe'>Buy Shoe</button>
             </a>
           </div>
         </div>

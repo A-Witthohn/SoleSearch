@@ -25,6 +25,20 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+// Route handler for "/soleSurvivor"
+app.get('/soleSurvivor', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+// Route handler for "/myProfile"
+app.get('/myProfile', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+// Catch-all route handler for all other routes
+app.get('/*', (req, res) => {
+  res.redirect('/');
+});
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {
