@@ -8,6 +8,7 @@ import Auth from '../utils/auth';
 
 
 const Home = () => {
+
   const { loading, data } = useQuery(QUERY_SHOES);
   const [likeShoe] = useMutation(LIKE_SHOE);
 
@@ -15,17 +16,24 @@ const Home = () => {
   const [currentShoeIndex, setCurrentShoeIndex] = useState(0);
 
 
-  // Handle Like Shoe
-  const handleLikeShoe = async (shoeId) => {
+  const handleLikeShoe = async () => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-    if (!token) {
+    if (!token || !data || !data.shoes || data.shoes.length === 0) {
       return false;
     }
 
     try {
+      const currentShoe = data.shoes[currentShoeIndex]; 
       await likeShoe({
-        variables: { shoeId: shoeId },
+        variables: {
+          input: {
+            _id: currentShoe._id,
+            shoeName: currentShoe.shoeName,
+            price: currentShoe.price,
+            image: currentShoe.image,
+          },
+        },
         refetchQueries: [{ query: QUERY_SHOES }],
       });
 
@@ -34,7 +42,6 @@ const Home = () => {
       console.error(err);
     }
   };
-
 
   // Handle Skip Shoe
   const handleSkipShoe = () => {
@@ -56,7 +63,6 @@ const Home = () => {
 
   const currentShoe = shoes[currentShoeIndex];
 
-
   return (
     <main>
       <div>
@@ -70,7 +76,7 @@ const Home = () => {
             </div>
             <div className="button-wrapper">
             <button className='Hate' onClick={handleSkipShoe}>👎</button>
-              <button className='Love' onClick={() => handleLikeShoe(currentShoe._id)}>👍</button>
+              <button className='Love' onClick={() => handleLikeShoe(currentShoe)}>👍</button>
               <div className="button-spacing"></div>
             </div>
           </div>
