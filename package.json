@@ -21,6 +21,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "mongodb": "^5.7.0",
     "save": "^2.9.0",
     "serve-favicon": "^2.5.0"
   }
