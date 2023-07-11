@@ -11,7 +11,7 @@ export const QUERY_USERS = gql`
         shoeName
         price
         image
-
+        shoeLink
       }
     }
   }
@@ -28,6 +28,7 @@ export const QUERY_USER = gql`
         shoeName
         price
         image
+        shoeLink
       }
     }
   }
@@ -40,6 +41,7 @@ export const QUERY_SHOES = gql`
       shoeName
       price
       image
+      shoeLink
       likeCount
       likes {
         _id

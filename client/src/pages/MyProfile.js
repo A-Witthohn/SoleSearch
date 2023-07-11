@@ -52,7 +52,9 @@ const MyProfile = () => {
             <h2>{shoe.shoeName}</h2>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
             <button onClick={() => handleDeleteShoe(shoe._id)}>Remove Shoe</button>
-            
+            <a href={shoe.shoeLink} target="_blank" rel="noopener noreferrer">
+                <button>Buy Shoe</button>
+            </a>
           </div>
         ))}
     </main>

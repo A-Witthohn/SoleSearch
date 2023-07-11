@@ -28,6 +28,10 @@ const shoeSchema = new Schema({
     type: String,
     required: true,
   },
+  shoeLink: {
+    type: String,
+    required: true,
+  },
   likes: [likeSchema],
 },
   {

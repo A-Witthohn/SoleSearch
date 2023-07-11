@@ -27,6 +27,9 @@ const SoleSurvivor = () => {
           <h2>{`${index + 1}. ${shoe.shoeName}`}</h2>
           <p className='like-count'>All-Time Likes: {shoe.likeCount}</p>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
+            <a href={shoe.shoeLink} target="_blank" rel="noopener noreferrer">
+                <button>Buy Shoe</button>
+            </a>
           </div>
         </div>
       ))}
