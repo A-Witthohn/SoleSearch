@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Auth from '/Users/JamesACone/bootcamp/SoleSearch/client/src/utils/auth.js';
+import Auth from '../../utils/auth';
 
 function Navbar() {
 const handleProfileClick = (event) => {
