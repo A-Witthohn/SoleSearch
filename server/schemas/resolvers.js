@@ -41,6 +41,16 @@ const resolvers = {
       if (context.user) {
         const user = await User.findById(context.user._id);
 
+        // Check if the shoe has already been liked by the user
+        const isLiked = await Shoe.exists({
+          _id: input._id,
+          'likes.userId': user._id,
+        });
+
+        if (isLiked) {
+          throw new Error('You have already liked this shoe.');
+        }
+
         // Create a new like object
         const like = {
           userId: user._id,

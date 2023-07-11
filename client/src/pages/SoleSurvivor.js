@@ -4,7 +4,9 @@ import { QUERY_SHOES } from '../utils/queries';
 
 
 const SoleSurvivor = () => {
-  const { loading, data } = useQuery(QUERY_SHOES);
+  const { loading, data } = useQuery(QUERY_SHOES, {
+    fetchPolicy: 'no-cache',
+  });
 
   if (loading) {
     return <div>Loading...</div>;
