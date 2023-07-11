@@ -39,16 +39,27 @@ const Home = () => {
     if (!loading && data && data.shoes) {
       // Filter out already liked shoes
       const likedShoes = getLikedShoes();
-      const filteredShoes = data.shoes.filter((shoe) => !likedShoes.includes(shoe._id));
+      const shuffledShoes = shuffleArray(data.shoes);
+      const filteredShoes = shuffledShoes.filter((shoe) => !likedShoes.includes(shoe._id));
       setFilteredShoes(filteredShoes);
     }
   }, [loading, data]);
+  
+  const shuffleArray = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
 
   const handleLikeShoe = async () => {
-    const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-    if (!token || !data || !data.shoes || data.shoes.length === 0) {
-      return false;
+    if (!Auth.loggedIn()) {
+      // Redirect to signup page if not logged in
+      window.location.href = '/signup';
+      return;
     }
 
     try {
@@ -76,6 +87,12 @@ const Home = () => {
   };
 
   const handleSkipShoe = () => {
+    if (!Auth.loggedIn()) {
+      // Redirect to signup page if not logged in
+      window.location.href = '/signup';
+      return;
+    }
+
     setCurrentShoeIndex((prevIndex) => prevIndex + 1);
   };
 
