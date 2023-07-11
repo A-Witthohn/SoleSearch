@@ -27,12 +27,12 @@ app.get('/', (req, res) => {
 
 // Route handler for "/soleSurvivor"
 app.get('/soleSurvivor', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 // Route handler for "/myProfile"
 app.get('/myProfile', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 // Catch-all route handler for all other routes
