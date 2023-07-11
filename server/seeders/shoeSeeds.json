@@ -74,7 +74,34 @@
     {
       "shoeName": "Air Jordan XXXVII Low Citron Pulse Laser Orange",
       "price": 500.00,
-      "likes": [],
+      "likes": [{
+        "userId": "64a767459131118fd76ce677",
+        "username": "Josh Benson"
+      },
+      {
+        "userId": "64a76740113311142444444e",
+        "username": "James Smith"
+      },
+      {
+        "userId": "64a76740113311142455444e",
+        "username": "John Adams"
+      }, 
+      {
+        "userId": "64a767404235705fd444624e",
+        "username": "Sara Thomas"
+      },
+      {
+        "userId": "64a7094042357802d444624e",
+        "username": "Steve Thomas"
+      },
+      {
+        "userId": "64a7679842357815f404624e",
+        "username": "Jim Bob"
+      },
+      {
+        "userId": "64a7679522357815f404624e",
+        "username": "Michael Jordan"
+      }],
 
       "shoeLink": "https://www.goat.com/sneakers/air-jordan-37-low-eybl-dx5568-800?utm_source=google_ads&utm_medium=cpc&utm_campaign=16777436806&utm_content=&gclid=CjwKCAjw2K6lBhBXEiwA5RjtCVPgcWxzb1BmP_84N6YBRZHyN9I1FEVfdRkP9jZsPEpcBCciH3adtBoCbBAQAvD_BwE",
 
@@ -129,34 +156,7 @@
     {
       "shoeName": "Nike Air Jordan 1 High Dior",
       "price": 7257.00,
-      "likes": [{
-        "userId": "64a767459131118fd76ce677",
-        "username": "Josh Benson"
-      },
-      {
-        "userId": "64a76740113311142444444e",
-        "username": "James Smith"
-      },
-      {
-        "userId": "64a76740113311142455444e",
-        "username": "John Adams"
-      }, 
-      {
-        "userId": "64a767404235705fd444624e",
-        "username": "Sara Thomas"
-      },
-      {
-        "userId": "64a7094042357802d444624e",
-        "username": "Steve Thomas"
-      },
-      {
-        "userId": "64a7679842357815f404624e",
-        "username": "Jim Bob"
-      },
-      {
-        "userId": "64a7679522357815f404624e",
-        "username": "Michael Jordan"
-      }],
+      "likes": [],
 
 
       "shoeLink": "https://stockx.com/air-jordan-1-retro-high-dior",
