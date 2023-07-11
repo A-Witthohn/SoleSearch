@@ -1,21 +1,23 @@
 main {
-  padding-top: 8px;
   place-items: center;
-  /* Center the items vertically and horizontally */
+max-height: 100%;
+margin-bottom: 25px;
+padding-bottom: 100px;
 }
 
 body {
   margin: 0;
-  background-color: #cac9c9;
-
+  background-color: #616161;
+ position: static;
+  min-height: 100%; /* Set minimum height of the body to 100% viewport height */
 }
 
 /* Header */
 
 header {
   width: 100%;
-  background-color: #cac9c9;
-  height: 2%;
+  background-color: #616161;
+  height: 100%;
   padding-top: 10px;
   margin-top: 10px;
   padding-bottom: 10px;
@@ -42,7 +44,7 @@ header {
   padding: 10px;
   margin-right: 5px;
   color: #FF4E8E;
-  background-color: #cac9c9;
+  background-color: #616161;
   text-decoration: none;
   font-weight: bold;
 }
@@ -60,7 +62,7 @@ header {
   font-size: 18px;
   padding: 10px;
   color: #FF4E8E;
-  background-color: #cac9c9;
+  background-color: #616161;
   text-decoration: none;
   font-weight: bold;
 }
@@ -87,7 +89,7 @@ a.Username {
 
 .Username:visited {
   font-size: 18px;
-  color: #005139;
+  color: #2EFFB6;
 }
 
 
@@ -98,7 +100,7 @@ a.Username {
   font-size: 18px;
   padding: 10px;
   color: #FF4E8E;
-  background-color: #cac9c9;
+  background-color: #616161;
   text-underline-offset: 5px;
 }
 
@@ -106,17 +108,105 @@ a.Username {
   background-color: #2EFFB6;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-title {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 48px;
+  color: #FF4E8E;
+}
+
+.form-input {
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 100%;
+  font-size: 48px;
+  background-color: #ccc;
+  border-radius: 35px;
+  text-align: center;
+}
+.form-input:focus {
+  outline: none; /* Remove the outline when the input is focused */
+}
+
+
+.form-submit {
+  width: 40%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  border-radius: 35px;
+  color: #005139;
+  background-color: #ccc;
+}
+
+.form-submit:hover{
+  background-color: #2EFFB6;
+  color: black;
+}
+.error-message {
+  /* Add styles for the error message as needed */
+  margin-top: 1rem;
+  text-align: center;
+  /* Center the error message */
+}
+
+.logo {
+  /* Adjust the width and other styles of the logo container as needed */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  /* Center the logo horizontally */
+  align-items: center;
+  /* Center the logo vertically */
+}
+
+.logo img {
+  max-width: 80%;
+  /* Ensure the image scales with the container */
+  height: auto;
+  /* Maintain the image's aspect ratio */
+
+}
 
 .Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 8px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8px;
   width: 50%;
   padding: 0px;
-  background-color: #cac9c9;
+  background-color: #616161;
 }
 
 @media (max-width: 768px) {
@@ -125,7 +215,7 @@ a.Username {
   .Navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
   }
 
@@ -139,10 +229,10 @@ a.Username {
   border: solid black;
   border-width: 2px 2px 2px 2px;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 18px;
   padding: 10px;
   color: #FF4E8E;
-  background-color: #cac9c9;
+  background-color: #616161;
   text-decoration: none;
 }
 
@@ -156,8 +246,9 @@ a.Username {
 
 .break {
   height: 5px;
-  background-color: black;
+  background-color: #000000;
   margin-top: 0px;
+  border-style: none;
 }
 
 .title {
@@ -190,17 +281,17 @@ h1 {
   /* Add margin-top to create space below the header */
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
   border-radius: 8px;
-  background-color: #cac9c9;
+  background-color: #616161;
 }
 
 
 /* card styling */
 .card img {
   max-width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #616161;
   border-radius: 8px;
-
 }
 
 .card h2 {
@@ -230,12 +321,58 @@ h1 {
   /* Add margin to create space between the buttons */
 }
 
+.SoleSurvivorLike{
+  font-weight: bold;
+}
+
+
+
+.BuyShoe {
+  border: solid black;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px;
+  color: #FF4E8E;
+  background-color: #616161;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.BuyShoe:hover {
+  background-color: #2EFFB6;
+  text-underline-offset: 5px;
+  text-decoration: underline;
+}
+
+
+.RemoveShoe{
+  border: solid black;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px;
+  color: #FF4E8E;
+  background-color: #616161;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.RemoveShoe:hover{
+  background-color: #2EFFB6;
+  text-underline-offset: 5px;
+  text-decoration: underline;
+
+}
+
+
 .Price {
   font-size: 20px;
   font-weight: bold;
 }
 
-.like-count{
+.like-count {
   font-size: 20px;
   font-weight: bold;
 }
@@ -248,7 +385,7 @@ h1 {
   font-size: 24px;
   padding: 10px;
   color: #3ecaa8;
-  background-color: #cac9c9;
+  background-color: #616161;
   text-underline-offset: 5px;
 }
 
@@ -265,7 +402,7 @@ h1 {
   font-size: 24px;
   padding: 10px;
   color: #FF4E8E;
-  background-color: #cac9c9;
+  background-color: #616161;
   text-underline-offset: 5px;
 }
 
@@ -282,12 +419,26 @@ h1 {
 }
 
 .social-container {
+  position: fixed; /* Use absolute positioning */
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #cac9c9;
+  background-color: #616161;
+margin-top: 50px;
+opacity: 0;
+transition: 0.5s;
 }
 
+.social-container.active {
+  opacity: 1;
+}
+
+.social-container.fade-transition {
+  transition-duration: 0s;
+}
 .follow-text {
   text-align: center;
   color: #141414;
