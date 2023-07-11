@@ -11,7 +11,7 @@ export default function SocialFollow() {
     return (
       <div className="social-container">
         <p className="follow-text">Follow us for latest shoes @SoleSearch ❤️</p>
-  
+      {/* <p>Hello</p> */}
         <div className="social-icons">
           <a href="https://www.Facebook.com" className="facebook social">
             <FontAwesomeIcon icon={faFacebook} size="3x" />
