@@ -21,6 +21,7 @@ const typeDefs = gql`
     price: Float!
     likes: [likeSchemaInput]
     image: String!
+    shoeLink: String!
     likeCount: Int
   }
 

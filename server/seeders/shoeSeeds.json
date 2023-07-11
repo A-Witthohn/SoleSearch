@@ -19,13 +19,21 @@
       "username": "Sara Thomas"
     }
   ],
+
+    "shoeLink": "https://stockx.com/gucci-ace-bee-w"
+
     "image": "AceSneakerWithBeeGucciWomens.png"
+
   },
   {
       "shoeName": "Adidas + Kanye West Boost 350 V2 YeezReel ",
       "price": 220.00,
       "likes": [],
+
+      "shoeLink": "https://stockx.com/adidas-yeezy-boost-350-v2-yeezreel"
+
       "image": "Adidas+KanyeWestBoost350V2YeezReel.png"
+
     },
     {
       "shoeName": "Adidas YeezyBoost 350 v2 BelugaRF Steeple Grey",
@@ -46,19 +54,32 @@
         "userId": "64a457404233489fd444624e",
         "username": "Sara Thomas"
       }],
+
+      "shoeLink": "https://stockx.com/adidas-yeezy-boost-350-v2-steeple-grey-beluga-solar-red"
+
       "image": "AdidasYeezyBoost350v2BelugaRFSteepleGrey.png"
+
     },
     {
       "shoeName": "Air Jordan 1 Mid Cement Grey True Blue",
       "price": 125.00,
       "likes": [],
+
+
+      "shoeLink": "https://stockx.com/air-jordan-1-mid-alt-cement-grey-true-blue-ps"
+
       "image": "AirJordan1MidCementGreyTrueBlue.png"
+
     },
     {
       "shoeName": "Air Jordan XXXVII Low Citron Pulse Laser Orange",
       "price": 500.00,
       "likes": [],
+
+      "shoeLink": "https://www.goat.com/sneakers/air-jordan-37-low-eybl-dx5568-800?utm_source=google_ads&utm_medium=cpc&utm_campaign=16777436806&utm_content=&gclid=CjwKCAjw2K6lBhBXEiwA5RjtCVPgcWxzb1BmP_84N6YBRZHyN9I1FEVfdRkP9jZsPEpcBCciH3adtBoCbBAQAvD_BwE"
+
       "image": "AirJordanXXXVIILowCitronPulseLaserOrange.png"
+
     },
     {
       "shoeName": "Balenciaga X Crocs Logo Debossed Pumps",
@@ -87,13 +108,23 @@
         "userId": "64a767984235781fd444624e",
         "username": "Jim Bob"
       }],
+
+
+      "shoeLink": "https://stockx.com/balenciaga-x-crocs-madame-80mm-green-w"
+
       "image": "BalenciagaXCrocsLogoDebossedPumps.png"
+
     },
     {
       "shoeName": "Balenciaga Mens Runner Sneaker in White",
       "price": 500.00,
       "likes": [],
+
+
+      "shoeLink": "https://stockx.com/balenciaga-runner-grey-blue-red-black"
+
       "image": "BalenciagaMensRunnerSneakerWhite.png"
+
     },
     {
       "shoeName": "Nike Air Jordan 1 High Dior",
@@ -126,31 +157,56 @@
         "userId": "64a7679522357815f404624e",
         "username": "Michael Jordan"
       }],
+
+
+      "shoeLink": "https://stockx.com/air-jordan-1-retro-high-dior"
+
       "image": "NikeAirJordan1HighDior.png"
+
     },
     {
       "shoeName": "Nike Pegasus FlyEase Womens",
       "price": 150.00,
       "likes": [],
+
+
+      "shoeLink": "https://www.nike.com/t/pegasus-flyease-se-womens-easy-on-off-road-running-shoes-cwVl7X/FJ2976-001"
+
       "image": "NikePegasusFlyEaseWomens.png"
+
     },
     {
       "shoeName": "Nike Quest 4 Royal Blue Womens",
       "price": 136.00,
       "likes": [],
+
+
+      "shoeLink": "https://www.goat.com/sneakers/wmns-quest-4-white-game-royal-da1106-101?utm_source=google_ads&utm_medium=cpc&utm_campaign=20346676051&utm_content=&gclid=CjwKCAjw2K6lBhBXEiwA5RjtCfZ3B3OCTZ7vVTwiAFX05mr2AcylQQAvFKhWMkPm7GYtFuFrKVA6rRoCzQsQAvD_BwE"
+
       "image": "NikeQuest4Womens.png"
+
     },
     {
       "shoeName": "Nike Vaporfly 3 Pink/Laser Orange Womens",
       "price": 250.00,
       "likes": [],
+
+
+      "shoeLink": "https://stockx.com/nike-zoomx-vaporfly-3-hyper-pink-laser-orange-womens"
+
       "image": "NikeVaporfly3Womens.png"
+
     },
     {
       "shoeName": "Run Away Sneaker Louis Vuitton",
       "price": 1220.00,
       "likes": [],
+
+  
+      "shoeLink": "https://us.louisvuitton.com/eng-us/products/run-away-sneaker-nvprod4320006v/1ABIVB?gclid=CjwKCAjw2K6lBhBXEiwA5RjtCXcuI2foEJRcmJi_UfJvB4J3hPMrulrvSEnYheKkYIgwPo_UOsJ8FhoCGj8QAvD_BwE&gclsrc=aw.ds"
+
       "image": "RunAwaySneakerLouisVuitton.png"
+
     },
     {
       "shoeName": "Street Fighter Shaq Attaq Basketball Shoes",
@@ -167,13 +223,22 @@
         "userId": "64a767019131118fd66ce677",
         "username": "John Adams"
       }],
+
+
+      "shoeLink": "https://stockx.com/reebok-shaq-attaq-street-fighter-champion-edition"
+
       "image": "StreetFighterShaqAttaqBasketballShoes.png"
+
     },
     {
-      "shoeName": "Yeezt Boost 700",
+      "shoeName": "Yeezy Boost 700",
       "price": 376.00,
       "likes": [],
+
+      "shoeLink": "https://stockx.com/adidas-yeezy-wave-runner-700-solid-grey"
+
       "image": "YeeztBoost700.png"
+
     },
     {
       "shoeName": "Yeezy 450  Resin",
@@ -202,7 +267,11 @@
         "userId": "64a767450231128fd76ce678",
         "username": "Jim Bob"
       }],
+
+      "shoeLink": "https://stockx.com/adidas-yeezy-450-resin"
+
       "image": "Yeezy450Resin.png"
+
     }
 ]
   
