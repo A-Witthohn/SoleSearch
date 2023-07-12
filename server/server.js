@@ -36,7 +36,7 @@ app.get('/myProfile', (req, res) => {
 });
 
 // Route handler for "/myProfile"
-app.get('/Signup', (req, res) => {
+app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
