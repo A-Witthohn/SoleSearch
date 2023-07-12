@@ -78,8 +78,10 @@ const MyProfile = () => {
         </h2>
        
         {userData.shoes.map((shoe) => (
+
           <div className='card-item' key={shoe._id}>
             <div className='card'>
+
             <h2>{shoe.shoeName}</h2>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
             <button className='RemoveShoe' onClick={() => handleDeleteShoe(shoe._id)}>Remove Shoe</button>
