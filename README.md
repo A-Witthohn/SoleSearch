@@ -16,17 +16,21 @@ This application allows users to scroll through an assortment of shoes and add s
 N/A
 
 ## Usage
-A user must navigate to the website by clicking on the heroku link provided. Once there, the user will see a homepage which displays a shoe and a thumbs up and thumbs down button. In order to start swiping on these shoes, the user must first be logged in. If a user attempts to like or dislike a shoe while not logged in, then they will be redirected to the sign-up page. If logged in, when the user likes or dislikes the shoe, it will move to the next shoe until the user has swiped on all of the shoes available.  
+A user must navigate to the website by clicking on the heroku link provided. Once there, the user will see a homepage which displays a shoe and a thumbs up and thumbs down button. In order to start swiping on these shoes, the user must first be logged in. 
 
-![homepage with a red shoe displayed](client/public/images/SoleSearch-homepage.png)
+![login page with email and password required](client/public/images/SoleSearch-login.png)
+
+If a user attempts to like or dislike a shoe while not logged in, then they will be redirected to the sign-up page. If logged in, when the user likes or dislikes the shoe, it will move to the next shoe until the user has swiped on all of the shoes available.  
+
+![homepage with a shoe displayed](client/public/images/SoleSearch-homepage.png)
 
 If the user is logged in, they will have the option to view their "liked" shoes under the "My Profile" link. Users that are not logged in will be redirected to the sign-up page if they click on "My Profile". On this page, the user can view all of the shoes they have liked in the past. In addition, the user can also remove that shoe from their likes by clicking on the "remove" button or find a link to the shoe by clicking on "Buy Shoe".
 
-![MyProfile page with users likes]()
+![MyProfile page with users likes](client/public/images/SoleSearch-myprofile.png)
 
 The final link is the SoleSurvivor page. By clicking on this link, the user will see the top 5 shoes with the most likes. This page shows the like count of the top shoes and also gives the user a link to purchase that shoe. 
 
-![Top rated shoes page]()
+![Top rated shoes page](client/public/images/SoleSearch-solesurvivor.png)
 
 
 Below is a link to the deployed application:
