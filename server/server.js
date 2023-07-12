@@ -35,6 +35,11 @@ app.get('/myProfile', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+// Route handler for "/myProfile"
+app.get('/Signup', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
 // Catch-all route handler for all other routes
 app.get('/*', (req, res) => {
   res.redirect('/');
