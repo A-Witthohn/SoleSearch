@@ -58,7 +58,7 @@ const Home = () => {
 
     if (!Auth.loggedIn()) {
       // Redirect to signup page if not logged in
-      window.location.href = '/signup';
+      window.location.href = '/Signup';
       return;
     }
 
@@ -89,7 +89,7 @@ const Home = () => {
   const handleSkipShoe = () => {
     if (!Auth.loggedIn()) {
       // Redirect to signup page if not logged in
-      window.location.href = '/signup';
+      window.location.href = '/Signup';
       return;
     }
 

@@ -16,7 +16,7 @@ const SocialFollow = () => {
       const distanceFromBottom = scrollHeight - (scrollPosition + clientHeight);
 
       // Set the threshold to a percentage of the clientHeight
-      const threshold = clientHeight * 0.2;
+      const threshold = clientHeight * 0.05;
 
       // Show or hide the social container based on the distance from the bottom
       setShowSocialContainer(distanceFromBottom <= threshold);
