@@ -73,18 +73,20 @@ const MyProfile = () => {
       </div>
         <h2>
           {userData.shoes.length
-            ? `Viewing ${userData.shoes.length} saved ${userData.shoes.length === 1 ? 'shoe' : 'shoes'}:`
+            ? `You have saved ${userData.shoes.length} ${userData.shoes.length === 1 ? 'shoe' : 'shoes'}:`
             : 'You have no saved shoes!'}
         </h2>
        
         {userData.shoes.map((shoe) => (
-          <div key={shoe._id}>
+          <div className='card-item' key={shoe._id}>
+            <div className='card'>
             <h2>{shoe.shoeName}</h2>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
             <button className='RemoveShoe' onClick={() => handleDeleteShoe(shoe._id)}>Remove Shoe</button>
             <a href={shoe.shoeLink} target="_blank" rel="noopener noreferrer">
                 <button className='BuyShoe'>Buy Shoe</button>
             </a>
+            </div>
           </div>
         ))}
     </main>
