@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -43,18 +42,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        window.scrollTo(0, 1);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <ApolloProvider client={client}>
