@@ -38,48 +38,44 @@ const Signup = () => {
     <main className="container">
       <form className="left-form" onSubmit={handleFormSubmit}>
         <h4 className="form-title">Sign Up</h4>
-        <div className="form-div">
-          {data ? (
-            <p>
-              Success! You may now head{' '}
-              <Link to="/">back to the homepage.</Link>
-            </p>
-          ) : (
-            <div className="form-input-wrapper">
-              <input
-                className="form-input"
-                placeholder="Your username"
-                name="username"
-                type="text"
-                value={formState.username}
-                onChange={handleChange}
-              />
-              <input
-                className="form-input"
-                placeholder="Your email"
-                name="email"
-                type="email"
-                value={formState.email}
-                onChange={handleChange}
-              />
-              <input
-                className="form-input"
-                placeholder="******"
-                name="password"
-                type="password"
-                value={formState.password}
-                onChange={handleChange}
-              />
-              <div className="form-submit-wrapper">
-                <button className="form-submit" type="submit">
-                  Submit
-                </button>
-              </div>
-            </div>
-          )}
+        {data ? (
+          <p>
+            Success! You may now head{' '}
+            <Link to="/">back to the homepage.</Link>
+          </p>
+        ) : (
+          <div className="form-div">
+            <input
+              className="form-input"
+              placeholder=" Username"
+              name="username"
+              type="text"
+              value={formState.username}
+              onChange={handleChange}
+            />
+            <input
+              className="form-input"
+              placeholder="Your email"
+              name="email"
+              type="email"
+              value={formState.email}
+              onChange={handleChange}
+            />
+            <input
+              className="form-input"
+              placeholder="******"
+              name="password"
+              type="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+            <button className="form-submit" type="submit">
+              Submit
+            </button>
+          </div>
+        )}
 
-          {error && <div className="error-message">{error.message}</div>}
-        </div>
+        {error && <div className="error-message">{error.message}</div>}
       </form>
     </main>
   );

@@ -22,11 +22,11 @@ const SoleSurvivor = () => {
 
   return (
     <main>
-      <h1>Unforgettable Soles: Celebrating Sole Search's Timeless Icons!</h1>
+      <h1 className='PageMotto'>Unforgettable Soles: Celebrating Sole Search's Timeless Icons!</h1>
       {top5Shoes.map((shoe, index) => (
         <div className="card-item" key={shoe._id}>
           <div className="card">
-          <h2>{`${index + 1}. ${shoe.shoeName}`}</h2>
+          <h2 className='currentShoe'>{`${index + 1}. ${shoe.shoeName}`}</h2>
           <p className='like-count'>All-Time Likes: <span className='SoleSurvivorLike'> {shoe.likeCount}</span></p>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
             <a href={shoe.shoeLink} target="_blank" rel="noopener noreferrer">
