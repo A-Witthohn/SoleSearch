@@ -110,12 +110,12 @@ const Home = () => {
   return (
     <main>
       <div>
-        <h1>Discover Your Sole Mate: Explore Sole Search's Diverse Shoe Collection!</h1>
+        <h1 className='PageMotto'>Discover Your Sole Mate: Explore Sole Search's Diverse Shoe Collection!</h1>
         <div className="card">
           <div key={currentShoe._id}>
             <img className="ImageSize" src={(`../images/${currentShoe.image}`)} alt={currentShoe.shoeName} />
             <div className="text-wrapper">
-              <h2>{currentShoe.shoeName}</h2>
+              <h2 className='currentShoe'>{currentShoe.shoeName}</h2>
               <p className="Price">Price: ${currentShoe.price}</p>
             </div>
             <div className="button-wrapper">

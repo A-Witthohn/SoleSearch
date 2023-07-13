@@ -81,7 +81,7 @@ const Login = (props) => {
       </form>
       <div className="logo">
         <img src='Giveaway.png'></img>
-              </div>
+      </div>
     </main>
   );
 };
