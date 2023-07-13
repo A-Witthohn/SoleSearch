@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Style/Style.css';
 import App from './App';
+import * as serviceWorker from './service-worker';
 
 
 ReactDOM.render(
@@ -11,4 +12,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
+serviceWorker.register();
