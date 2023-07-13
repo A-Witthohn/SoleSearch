@@ -37,35 +37,39 @@ header {
 }
 
 .login,
-.signup {
+.signup,
+.logout {
   border: solid black;
   border-width: 2px 2px 2px 2px;
   border-radius: 8px;
-  font-size: 28px;
+  font-size: 24px;
   padding: 10px;
   color: #ff4e8e;
   background-color: #616161;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: 10px;
 }
 
 @media (max-width: 1500px) {
   .login,
-  .signup {
-    font-size: 26px;
+  .signup,
+  .logout {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 768px) {
   .login,
-  .signup {
-    font-size: 22px;
+  .signup,
+  .logout {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 479px) {
   .login,
-  .signup {
+  .signup,
+  .logout {
     font-size: 16px;
   }
 }
@@ -106,20 +110,14 @@ a.Username {
   color: #2effb6;
 }
 
-.logout {
-  border: solid black;
-  border-width: 2px 2px 2px 2px;
-  border-radius: 8px;
-  font-size: 18px;
-  padding: 10px;
-  color: #ff4e8e;
-  background-color: #616161;
-  text-underline-offset: 5px;
-}
-
 .logout:hover {
   background-color: #2effb6;
 }
+
+@media (max-width: 1024px) {
+  .logout {
+margin-left: 0;  }
+  }
 
 /* Container Styles */
 
@@ -265,25 +263,23 @@ a.Username {
   border: solid black;
   border-width: 2px 2px 2px 2px;
   border-radius: 8px;
-  font-size: 28px;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
   padding: 10px;
   color: #ff4e8e;
   background-color: #616161;
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) {
   .dropdown-button {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 768px) {
   .dropdown-button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -582,8 +578,7 @@ h1 {
     border: 2px solid #000;
     border-radius: 8px;
     color: #ff4e8e;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
     padding: 10px;
     text-decoration: none;
 }
@@ -597,7 +592,7 @@ h1 {
   border: 2px solid #000;
   border-radius: 8px;
   color: #ff4e8e;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px;
   text-decoration: none;
 }
@@ -828,10 +823,9 @@ h2{
   }
 
   .button-wrapper {
-    flex-direction: column;
   }
 
   .button-wrapper button {
-    margin: 5px 0;
+    margin: 0px 20px;
   }
 }

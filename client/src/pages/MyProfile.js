@@ -9,37 +9,37 @@ const MyProfile = () => {
   const { username } = Auth.getProfile().data;
 
   const { loading, data } = useQuery(QUERY_USER, {
-      variables: { username }, 
-      fetchPolicy: 'network-only',
-    });
+    variables: { username },
+    fetchPolicy: 'network-only',
+  });
 
   const userData = data?.user || [];
   const [removeShoe] = useMutation(REMOVE_SHOE);
 
   const getLikedShoes = () => {
     const token = Auth.getToken();
-  
+
     // Check if the user is logged in
     if (!Auth.loggedIn() || !token) {
-      return []; 
+      return [];
     }
-  
+
     try {
       // Retrieve the liked shoes from localStorage 
       const likedShoesStr = localStorage.getItem('likedShoes');
-  
+
       if (likedShoesStr) {
         const likedShoes = JSON.parse(likedShoesStr);
         return likedShoes;
       } else {
-        return []; 
+        return [];
       }
     } catch (err) {
       console.error('Error retrieving liked shoes:', err);
-      return []; 
+      return [];
     }
   };
- 
+
   const handleDeleteShoe = async (shoeId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
     console.log("delete")
@@ -69,28 +69,29 @@ const MyProfile = () => {
   return (
     <main>
       <div>
-          <h1>Viewing saved shoes!</h1>
+        <h1>Viewing saved shoes!</h1>
       </div>
-        <h2>
-          {userData.shoes.length
-            ? `You have saved ${userData.shoes.length} ${userData.shoes.length === 1 ? 'shoe' : 'shoes'}:`
-            : 'You have no saved shoes!'}
-        </h2>
-       
-        {userData.shoes.map((shoe) => (
+      <h2>
+        {userData.shoes.length
+          ? `You have saved ${userData.shoes.length} ${userData.shoes.length === 1 ? 'shoe' : 'shoes'}:`
+          : 'You have no saved shoes!'}
+      </h2>
 
-          <div className='card-item' key={shoe._id}>
-            <div className='card'>
+      {userData.shoes.map((shoe) => (
 
+        <div className='card-item' key={shoe._id}>
+          <div className='card'>
             <h2>{shoe.shoeName}</h2>
             <img src={`/images/${shoe.image}`} alt={shoe.shoeName} />
+            < div className='button-wrapper'>
             <button className='RemoveShoe' onClick={() => handleDeleteShoe(shoe._id)}>Remove Shoe</button>
             <a href={shoe.shoeLink} target="_blank" rel="noopener noreferrer">
-                <button className='BuyShoe'>Buy Shoe</button>
+              <button className='BuyShoe'>Buy Shoe</button>
             </a>
             </div>
           </div>
-        ))}
+        </div>
+      ))}
     </main>
   );
 };

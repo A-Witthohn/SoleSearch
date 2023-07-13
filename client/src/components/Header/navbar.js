@@ -30,7 +30,7 @@ function Navbar() {
   return (
     <div className='Navbar'>
       <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
-        <button className="dropdown-button" onClick={toggleDropdown}>
+        <button className="dropdown-button Menu" onClick={toggleDropdown}>
           Menu &#9662;
         </button>
         {isDropdownOpen && (
