@@ -35,7 +35,7 @@ The final link is the SoleSurvivor page. By clicking on this link, the user will
 
 Below is a link to the deployed application:
 
-https://lit-stream-09844-a8286bac8c49.herokuapp.com/
+https://sole-search-258e49665aec.herokuapp.com/
 
 ## Technologies Used 
 
@@ -53,7 +53,7 @@ https://lit-stream-09844-a8286bac8c49.herokuapp.com/
 
     3. Allow a user to add a shoe to the list
 
-    4. Have the option to by the shoe directly on the app
+    4. Have the option to buy the shoe directly on the app
 
 
 ## Credits
